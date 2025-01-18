@@ -103,6 +103,7 @@ async def start_command(client: Client, message: Message):
 
         return
     else:
+        await m.reply_photo(f"https://ibb.co/dKcJ1W0",
         reply_markup = InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton('Join My Telegram Channel', url='https://t.me/+zf3n5ZOf9YkzMDRl')
