@@ -48,12 +48,12 @@
       },
       "START_MESSAGE": {
         "description": "Optional: start message of bot, use HTML parsemode format",
-        "value": "Hello {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.",
+        "value": "Hello {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.\n\n~ Ongoing Anime Tamil",
         "required": false
       },
       "FORCE_SUB_MESSAGE": {
         "description": "Optional: Force Sub message of bot, use HTML parsemode format",
-        "value": "Hello {mention}\n\n<b>You Need To Join In My Channel To Use Me\n\nKindly Please Join Channel</b>",
+        "value": "Yo {mention}\n\n<b>Join Channel & Channel 2 Click Try Again\n\nKindly Please Join Channel</b>",
         "required": false
       },
       "ADMINS": {
