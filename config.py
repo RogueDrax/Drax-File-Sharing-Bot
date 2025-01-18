@@ -57,7 +57,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME :</b>\n{uptime}"
 
 USER_REPLY_TEXT = "<b>Are You Nuts ?\n\nWhy The Hell are Sending Messages Here!?</b>"
 
-START_MSG = os.environ.get("START_MESSAGE", "<b>Yo {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.</b>"), os.reply_photo(f"https://ibb.co/dKcJ1W0")
+START_MSG = os.environ.get("START_MESSAGE", "<b>Yo {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.</b>")
 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>Yo✋ {mention}\n\nJoin Channel 1 & 2 and then Click Try Again\n\nKindly Please Join Our Channel</b>")
 
