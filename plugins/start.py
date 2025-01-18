@@ -105,7 +105,7 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton()
+                InlineKeyboardButton('Join My Telegram Channel', url='https://t.me/+zf3n5ZOf9YkzMDRl')
             ],[
                 InlineKeyboardButton("🗒️ Info", callback_data = "about"),
                 InlineKeyboardButton("🔒 Close", callback_data = "close"),
