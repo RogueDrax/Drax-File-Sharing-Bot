@@ -12,7 +12,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         await query.message.edit_text(
             text = f"<b>🤖 Bot :</b> <a href='https://t.me/Drax_Movie_Bot'>File Sharing Bot</a> \n<b>📝 Language :</b> <a href='https://python.org'>Python 3</a> \n<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram {__version__}</a> \n<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a> \n<b>📢 Channel :</b> <a href='https://t.me/DraX_Society'>Drax Society</a> \n<b>🧑‍💻 Developer :</b> <a href='tg://user?id={OWNER_ID}'>DraX</a>",
             disable_web_page_preview = True,
-            reply_photo(f"https://ibb.co/dKcJ1W0"),
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
