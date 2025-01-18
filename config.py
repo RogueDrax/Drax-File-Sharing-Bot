@@ -18,6 +18,7 @@ DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002409530167"))
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002215166668"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002029139778"))
+FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "-1002257906324"))
 FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "600")) # auto delete in seconds
 
 
@@ -57,9 +58,9 @@ BOT_STATS_TEXT = "<b>BOT UPTIME :</b>\n{uptime}"
 
 USER_REPLY_TEXT = "❌Don't Send Me Messages Directly I'm Only File Share Bot !"
 
-START_MSG = os.environ.get("START_MESSAGE", "Hello {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.")
+START_MSG = os.environ.get("START_MESSAGE", "Yo✋ {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It From Special Link.")
 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {mention}\n\n<b>You Need To Join In My Channel/Group To Use Me\n\nKindly Please Join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Yo✋ {mention}\n\n<b>Join Channel 1 & Channel 2 and then Click Try Again\n\nKindly Please Join Channel</b>")
 
 
 
