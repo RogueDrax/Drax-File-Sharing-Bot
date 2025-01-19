@@ -112,20 +112,6 @@ async def start_command(client: Client, message: Message):
             ]]
         )
 
-        await message.reply_photo(
-          photo="https://ibb.co/dKcJ1W0",  # Replace with the image URL or file path
-             caption=START_MSG.format(
-             first=message.from_user.first_name,
-             last=message.from_user.last_name,
-             username=None if not message.from_user.username else '@' + message.from_user.username,
-             mention=message.from_user.mention,
-             id=message.from_user.id
-        ),
-        reply_markup=reply_markup,
-        disable_web_page_preview=True,
-        quote=True
-        )
-
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
