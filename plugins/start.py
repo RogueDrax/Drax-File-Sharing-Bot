@@ -111,6 +111,9 @@ async def start_command(client: Client, message: Message):
                 InlineKeyboardButton("🔒 Close", callback_data = "close"),
             ]]
         )
+
+        await message.reply_photo(
+            photo='https://ibb.co/x5hxyXf')
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
@@ -125,24 +128,7 @@ async def start_command(client: Client, message: Message):
         )
         return
 
-        await message.reply_photo(
-            photo='https://ibb.co/x5hxyXf',  # You can use a URL or a file_id if it's hosted on Telegram
-            caption=START_MSG.format(
-            first=message.from_user.first_name,
-            last=message.from_user.last_name,
-            username=None if not message.from_user.username else '@' + message.from_user.username,
-            mention=message.from_user.mention,
-            id=message.from_user.id
-        ),
-        reply_markup=reply_markup,
-        disable_web_page_preview=True,
-        quote=True
-        )
-        return
-
-    
-    
-
+        
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
