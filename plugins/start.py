@@ -112,7 +112,7 @@ async def start_command(client: Client, message: Message):
             ]]
         )
 
-        
+        photo = message.image
         await message.reply_photo(
         await message.reply_text(
             photo= ('https://ibb.co/x5hxyXf'), 
