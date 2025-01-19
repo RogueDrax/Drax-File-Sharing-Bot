@@ -112,6 +112,7 @@ async def start_command(client: Client, message: Message):
             ]]
         )
 
+        await message.reply_photo(f"https://ibb.co/dKcJ1W0",
         await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
@@ -124,6 +125,7 @@ async def start_command(client: Client, message: Message):
             disable_web_page_preview = True,
             quote = True
         )
+                           )
         return
 
         
