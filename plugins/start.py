@@ -119,8 +119,8 @@ async def start_command(client: Client, message: Message):
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
-                id = message.from_user.id,
-                await message.reply_photo(f"https://ibb.co/dKcJ1W0"),
+                id = message.from_user.id
+                
             reply_markup = reply_markup,
             disable_web_page_preview = True,
             quote = True
