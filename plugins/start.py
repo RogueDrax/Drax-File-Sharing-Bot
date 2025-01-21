@@ -113,8 +113,8 @@ async def start_command(client: Client, message: Message):
         )
 
         await message.reply_photo(
-        await message.reply_text(
             photo = "https://ibb.co/x5hxyX",
+        await message.reply_text(
             text = START_MSG.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
@@ -122,12 +122,13 @@ async def start_command(client: Client, message: Message):
                 mention = message.from_user.mention,
                id = message.from_user.id
             )
+            )
             ),
         
             reply_markup = reply_markup,
             disable_web_page_preview = True,
             quote = True
-        )
+        
         return
 
         
