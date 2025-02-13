@@ -5,13 +5,13 @@ from logging.handlers import RotatingFileHandler
 
 
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8046383537:AAGLnAh1t7ljNcLqeOVmO9jzP1Bz4aJNugs")
-API_ID = int(os.environ.get("API_ID", "24435985"))
-API_HASH = os.environ.get("API_HASH", "0fec896446625478537e43906a4829f8")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+API_ID = int(os.environ.get("API_ID", ""))
+API_HASH = os.environ.get("API_HASH", "")
 
 
 OWNER_ID = int(os.environ.get("OWNER_ID", "5552335015"))
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://Drax:Roronoa.36@cluster0.cbsty.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URL = os.environ.get("DB_URL", "")
 DB_NAME = os.environ.get("DB_NAME", "Cluster0")
 
 
