@@ -26,7 +26,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
              # Replace with the actual URL or file path of the image
             
-        )
+        
     elif data == "close":
         await query.message.delete()
         try:
