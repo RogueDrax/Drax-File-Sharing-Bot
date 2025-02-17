@@ -1,6 +1,8 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
 
 
