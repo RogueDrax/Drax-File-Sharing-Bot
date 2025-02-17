@@ -9,37 +9,37 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
-        # Edit the message with the text
-        await query.message.edit_text(
-            photo="https://ibb.co/bMJc7fHL",
-            text = f"<b>🤖 Bot :</b> <a href='https://t.me/Drax_Movie_Bot'>File Sharing Bot</a> \n<b>📝 Language :</b> <a href='https://python.org'>Python 3</a> \n<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram {__version__}</a> \n<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a> \n<b>📢 Channel :</b> <a href='https://t.me/DraX_Society'>Drax Society</a> \n<b>🧑‍💻 Developer :</b> <a href='tg://user?id={OWNER_ID}'>DraX</a>",
-            disable_web_page_preview = True,
-            reply_markup = InlineKeyboardMarkup(
+        # Define the caption text
+        caption = (
+            f"<b>🤖 Bot :</b> <a href='https://t.me/Drax_Movie_Bot'>File Sharing Bot</a> \n"
+            f"<b>📝 Language :</b> <a href='https://python.org'>Python 3</a> \n"
+            f"<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram {__version__}</a> \n"
+            f"<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a> \n"
+            f"<b>📢 Channel :</b> <a href='https://t.me/DraX_Society'>Drax Society</a> \n"
+            f"<b>🧑‍💻 Developer :</b> <a href='tg://user?id={OWNER_ID}'>DraX</a>"
+        )
+
+        # Send the image with the caption
+        await client.send_photo(
+            chat_id=query.message.chat.id,
+            photo="https://ibb.co/bMJc7fHL",  # Replace with your image URL or file path
+            caption=caption,
+            reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 Close", callback_data="close")
                     ]
                 ]
-            )
+            ),
+            reply_to_message_id=query.message.message_id  # Reply to the original message
         )
-        
 
-             # Replace with the actual URL or file path of the image
-            
-        
+        # Delete the original message (optional, if you want to replace it with the image)
+        await query.message.delete()
+
     elif data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
         except:
             pass
-
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
