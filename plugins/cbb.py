@@ -25,7 +25,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         # Send an image along with the message
         await client.send_photo(
             chat_id=query.message.chat.id,
-            photo="https://example.com/path/to/your/image.jpg",  # Replace with the actual URL or file path of the image
+            photo="https://ibb.co/bMJc7fHL",  # Replace with the actual URL or file path of the image
             caption="Here is an image related to the bot!",
             reply_to_message_id=query.message.message_id
         )
