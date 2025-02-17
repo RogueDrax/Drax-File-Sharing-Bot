@@ -11,6 +11,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "about":
         # Edit the message with the text
         await query.message.edit_text(
+            photo="https://ibb.co/bMJc7fHL",
             text = f"<b>🤖 Bot :</b> <a href='https://t.me/Drax_Movie_Bot'>File Sharing Bot</a> \n<b>📝 Language :</b> <a href='https://python.org'>Python 3</a> \n<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram {__version__}</a> \n<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a> \n<b>📢 Channel :</b> <a href='https://t.me/DraX_Society'>Drax Society</a> \n<b>🧑‍💻 Developer :</b> <a href='tg://user?id={OWNER_ID}'>DraX</a>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
@@ -22,12 +23,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
         )
         
-        # Send an image along with the message
-        await client.send_photo(
-            chat_id=query.message.chat.id,
-            photo="https://ibb.co/bMJc7fHL",  # Replace with the actual URL or file path of the image
-            caption="Here is an image related to the bot!",
-            reply_to_message_id=query.message.message_id
+
+             # Replace with the actual URL or file path of the image
+            
         )
     elif data == "close":
         await query.message.delete()
