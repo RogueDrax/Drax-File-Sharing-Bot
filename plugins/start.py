@@ -234,8 +234,35 @@ async def delete_files(messages, client, k):
             print(f"The attempt to delete the media {msg.id} was unsuccessful: {e}")
     # await client.send_message(messages[0].chat.id, "Your Video / File Is Successfully Deleted ✅")
     await k.edit_text("Your Video / File Is Successfully Deleted ✅")
+    
 
+@Bot.on_message(filters.command('GetAnime') & filters.private)
+async def get_anime(client: Client, message: Message):
+    # Ask the user to enter the anime name
+    await message.reply("Enter The Anime Name:")
 
+@Bot.on_message(filters.text & filters.private)
+async def anime_response(client: Client, message: Message):
+    # Check if the message is a reply to the /GetAnime command
+    if message.reply_to_message and message.reply_to_message.text == "Enter The Anime Name:":
+        anime_name = message.text  # Get the anime name entered by the user
+        
+        # You can replace these with dynamic data if you want
+        anime_image_url = "https://ibb.co/dsnnCR2p"  # Add your anime image URL here
+        anime_link = f"https://t.me/Hachiman_File_Bot?start=Z2V0LTc4MDg3NzAyNDAwMDA5Mw{anime_name.lower().replace(' ', '-')}"  # A sample link to Anime Planet (you can change this to any link you want)
+        
+        # Prepare buttons with the anime link
+        buttons = [
+            [InlineKeyboardButton(text="View Anime", url=anime_link)]
+        ]
+        
+        # Send the anime name, image, and button
+        await client.send_photo(
+            chat_id=message.chat.id,
+            photo=anime_image_url,  # Image URL
+            caption=f"Here is your requested anime: {anime_name}",
+            reply_markup=InlineKeyboardMarkup(buttons)
+        )
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
